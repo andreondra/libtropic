@@ -4,3 +4,6 @@
 [submodule "tests/platforms/libtropic-stm32"]
 	path = tests/platforms/libtropic-stm32
 	url = https://github.com/tropicsquare/libtropic-stm32
+[submodule "vendor/mbedtls"]
+	path = vendor/mbedtls
+	url = https://github.com/Mbed-TLS/mbedtls.git
