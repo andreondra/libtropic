@@ -146,3 +146,12 @@ if(USE_TREZOR_CRYPTO)
     target_link_libraries(tropic PRIVATE trezor_crypto)
     target_compile_definitions(tropic PRIVATE USE_TREZOR_CRYPTO)
 endif()
+
+if(LT_CRYPTO_MBEDTLS)
+    find_package(MbedTLS)
+    set(MbedTLS_DIR ${vendor/mbedtls/cmake})
+    target_link_libraries(tropic PRIVATE 
+                            MbedTLS::mbedtls 
+                            MbedTLS::tfpsacrypto
+                            MbedTLS::mbedx509)
+endif()
